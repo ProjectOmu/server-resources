@@ -1,0 +1,10 @@
+[Unit]
+Description=Runs database-cleanup.service every 4 hours.
+
+[Timer]
+OnCalendar=*-*-* 02/4:00:00
+Persistent=true
+Unit=database-truncate.service
+
+[Install]
+WantedBy=timers.target

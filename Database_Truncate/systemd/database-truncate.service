@@ -1,0 +1,10 @@
+[Unit]
+Description=Runs a script to clear admin_logs in SS14 Database.
+Wants=db-truncate.timer
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /path/to/database-truncate.sh
+
+[Install]
+WantedBy=multi-user.target
